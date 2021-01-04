@@ -1,0 +1,24 @@
+<hello name="{{ name }}"></hello>
+<p>{{"Hello Word" | uppercase}}</p>
+<p>{{"Hello World" | lowercase }}</p>
+<p>{{mydate | date:'longDate'}}</p>
+<p>{{11 | currency:'INR' }}</p>
+<h3>Two way Data Binding</h3>
+<p>{{customData}}</p>
+<input type="text" [(ngModel)]="myname" />
+<br />
+<button (click)="hello()">Click</button>
+<br />
+This is Data Binding: {{myname}}
+<hr />
+<h4>Forms</h4>
+<form #myform="ngForm" (ngSubmit)="formHello(myform.value)">
+  <input type="text" name="txtusername" placeholder="Username" ngModel /><br />
+  <input
+    type="password"
+    name="txtpassword"
+    placeholder="Password"
+    ngModel
+  /><br />
+  <input type="submit" />
+</form>
